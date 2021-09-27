@@ -1,0 +1,108 @@
+:root { 
+    /* Background*/
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+
+    /*Font colors, heading and text,*/
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Soft-red: hsl(14, 88%, 65%);
+}
+
+body { 
+    background-image: linear-gradient(180deg, var(--Soft-violet), var(--Soft-blue));
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#yoo1 { 
+   
+}
+.accordion { 
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    max-width: 350px;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.mainHeader { 
+ text-align: center;
+}
+
+.imageCuz { 
+    align-self: center;
+} 
+
+
+
+
+
+.accordion__label, 
+.accordion__content { 
+    padding: 14px 0px;
+}
+
+.accordion__label { 
+    display: block;
+    color: var(--Very-dark-grayish-blue);
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.1s;
+    font-size: 14px;
+}
+
+.accordion__label:hover { 
+    color: var(--Soft-red);
+}
+
+.accordion__content { 
+    font-size: 12px;
+    color: var(--Dark-grayish-blue);
+}
+
+
+.accordion__label::after { 
+    content: url("images/icon-arrow-down.svg");
+    position: absolute;
+    right: 20px;
+    transition: transform 0.4s;
+}
+
+.accordion__content { 
+    line-height: 1.6;
+    display: none;
+}
+
+.accordion__input { 
+    display: none;
+}
+
+
+.accordion__input:checked ~ .accordion__content { 
+    display: block;
+}
+
+.accordion__input:checked ~ .accordion__label { 
+    color:var(--Very-dark-desaturated-blue);
+    font-weight: 700;
+}
+
+.accordion__input:checked ~ .accordion__label::after { 
+    transform: rotate(0.5turn);
+}
+
+
+
+
+
